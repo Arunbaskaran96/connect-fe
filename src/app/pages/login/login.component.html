@@ -1,0 +1,23 @@
+<div class="container">
+    <mat-card>
+        <form (submit)="handleSubmit(loginForm)" #loginForm="ngForm">
+            <div>
+                <label>UserName</label><br />
+                <input name="email" type="email" ngModel userNameValidator #username="ngModel" />
+                @if(!username.valid && username.touched ){
+                <span class="error_text">{{username.errors?.['error']}}</span>
+                }
+            </div>
+            <div>
+                <label>Password</label><br />
+                <input name="password" type="password" ngModel #password="ngModel" required minlength="8" />
+                @if(!password.valid && password.touched){
+                <span class="error_text">Password is required</span>
+                }
+            </div>
+            <button [disabled]="!loginForm.valid" class="login_btn">Login</button>
+        </form>
+        <button class="forgot_pass_btn" (click)="forgotPassword()">Forgot Password</button><br />
+        <button class="register_btn" routerLink="/register">Register</button>
+    </mat-card>
+</div>

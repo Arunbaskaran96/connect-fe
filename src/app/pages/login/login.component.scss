@@ -1,0 +1,37 @@
+
+
+input{
+    height: 30px;
+    width: 250px;
+}
+
+
+button{
+    display: block;
+    height: 30px;
+    width: 250px;
+    background-color: green;
+    border: none;
+    color: white;
+    cursor: pointer;
+    &:disabled{
+        opacity: 0.3;
+        cursor: not-allowed;
+    }
+}
+
+.login_btn{
+    margin-top: 10px;
+}
+
+.forgot_pass_btn{
+    background-color: orange;
+    margin-top: 10px;
+}
+.register_btn{
+    background-color: rgb(16, 128, 90);
+}
+
+.input-error{
+    border: 1px solid red;
+}
