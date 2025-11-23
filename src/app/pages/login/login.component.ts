@@ -24,10 +24,6 @@ export class LoginComponent {
 
   private _activatedRoute = inject(ActivatedRoute);
 
-  constructor() {
-    console.log(this._activatedRoute.snapshot);
-  }
-
   handleSubmit(form: NgForm): void {
     this._authService
       .login(form.value)
@@ -37,7 +33,6 @@ export class LoginComponent {
           this._router.navigate(['/home']);
         },
         error: (data) => {
-          console.log(data);
           this._toastrService.showToastr(data.error.message, 'X', {
             duration: 3000,
             horizontalPosition: 'right',
