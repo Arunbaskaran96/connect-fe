@@ -13,7 +13,6 @@ import {
   styleUrl: './feed.component.scss',
 })
 export class FeedComponent implements OnInit {
-  // private readonly id = input();
   public id = input.required();
 
   ngOnInit(): void {

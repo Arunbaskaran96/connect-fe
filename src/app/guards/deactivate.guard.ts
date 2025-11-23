@@ -10,6 +10,5 @@ export const deactivateGuard: CanDeactivateFn<any> = (
   currentState: RouterStateSnapshot,
   nextState: RouterStateSnapshot,
 ) => {
-  console.log(component);
   return true;
 };
