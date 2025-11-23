@@ -4,7 +4,7 @@
             <div>
                 <label>UserName</label><br />
                 <input name="email" type="email" ngModel userNameValidator #username="ngModel" />
-                @if(!username.valid && username.touched ){
+                @if(!username.valid && username.touched){
                 <span class="error_text">{{username.errors?.['error']}}</span>
                 }
             </div>
@@ -17,7 +17,7 @@
             </div>
             <button [disabled]="!loginForm.valid" class="login_btn">Login</button>
         </form>
-        <button class="forgot_pass_btn" (click)="forgotPassword()">Forgot Password</button><br />
+        <button class="forgot_pass_btn" routerLink="/home" (click)="forgotPassword()">Forgot Password</button><br />
         <button class="register_btn" routerLink="/register">Register</button>
     </mat-card>
 </div>

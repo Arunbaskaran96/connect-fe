@@ -1,11 +1,10 @@
 import { Component, DestroyRef, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { MatCard } from '@angular/material/card';
-import { Router, RouterLink } from '@angular/router';
+import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { UserNameValidator } from '../../directives/username-validation.directive';
 import { AuthService } from '../../services/auth.service';
 import { ToastrService } from '../../services/toastr.service';
-import { MatSnackBar } from '@angular/material/snack-bar';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 
 @Component({
@@ -23,7 +22,11 @@ export class LoginComponent {
 
   private _destroyRef = inject(DestroyRef);
 
-  constructor(private snackBar: MatSnackBar) {}
+  private _activatedRoute = inject(ActivatedRoute);
+
+  constructor() {
+    console.log(this._activatedRoute.snapshot);
+  }
 
   handleSubmit(form: NgForm): void {
     this._authService

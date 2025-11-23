@@ -1,0 +1,11 @@
+.container{
+    .main_content{
+        display: flex;
+        width: 100%;
+        app-sidebar{
+            width: 300px;
+            background-color: whitesmoke;
+            height: 91vh;
+        }
+    }
+}

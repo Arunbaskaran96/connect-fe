@@ -1,0 +1,21 @@
+.container{
+    margin-top: 20px;
+    text-align: center;
+    min-width: 300px;
+    ul{
+        height: 40px;
+        width: 100%;
+
+        li{
+            height: 100%;
+            padding-top: 10px;
+            text-align: center;
+            margin: 10px 0px;
+            cursor: pointer;
+            transition: 300ms;
+            &:hover{
+                background-color: white;
+            }
+        }
+    }
+}

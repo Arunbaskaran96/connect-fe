@@ -1,0 +1,15 @@
+@if(products){
+<div class="container">
+    @for(product of products?.products;track product.id){
+    <mat-card class="product" [routerLink]="['..','product',product.id]">
+        <mat-card-header>
+            <h3>{{product?.title}}</h3>
+        </mat-card-header>
+        <img mat-card-avatar [style.view-transition-name]="'product-img'+product.id" [src]="product?.images[0]">
+        <mat-card-content>
+            <p>Price:{{product?.price}}</p>
+        </mat-card-content>
+    </mat-card>
+    }
+</div>
+}
