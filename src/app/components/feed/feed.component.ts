@@ -16,7 +16,5 @@ export class FeedComponent implements OnInit {
   // private readonly id = input();
   public id = input.required();
 
-  ngOnInit(): void {
-    console.log('clg--', this.id());
-  }
+  ngOnInit(): void {}
 }
